@@ -1,0 +1,294 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 150%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+.CV {
+  min-height: 1vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 1230px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 0 15px;
+}
+
+.CV__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax( 290px,1fr));
+  grid-gap: 20px;
+}
+
+
+.CV__about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.CV__title {
+  color: #4B3869;
+  font-size: 48px;
+  line-height: 1.1;
+
+  margin-bottom: 20px;
+}
+
+.CV__subtitle {
+  color: #6D8299;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.CV__description {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.CV__links {
+  display: flex;
+}
+
+.CV__link {
+  margin-right: 15px;
+
+  font-size: 35px;
+  color: #4B3869;
+}
+
+.CV__link:hover {
+  color: #6D8299;
+}
+
+
+.CV__box {
+  max-width: 350px;
+  justify-self: center;
+  overflow: hidden;
+  border: 10px solid #fff;
+
+  background-image: linear-gradient(120deg, #fda085 0%, #FFCCD2 50%, #FFDEFA 100%);
+
+  animation: ava-animate 8s infinite alternate;
+  box-shadow: 7px 10px 20px rgba(0, 0, 0, 0.205);
+}
+
+.CV__box-img {
+  animation: ava-bg 7s infinite alternate;
+}
+
+@media screen and (max-width: 978px) {
+  .CV {
+    padding-top: 30px;
+  }
+
+  .CV__container {
+    grid-row-gap: 20px;
+    line-height: 100%;
+    margin-top: 20px;
+  }
+
+  .CV__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .CV__subtitle {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .CV__description {
+    font-size: 14px;
+  }
+
+  .CV__about {
+    text-align: center;
+  }
+
+  .CV__links {
+    justify-content: center;
+  }
+
+  .CV__box {
+    max-width: 250px;
+    justify-self: center;
+  }
+}
+
+.about {
+  margin-top: 40px;
+  background-color: #F2F2F2;
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.about_work_experience {
+  max-width: 1230px;
+  width: 100%;
+  margin-top: 30px;
+  padding: 0 15px;
+  margin-bottom: 40px;
+}
+
+.WE_title {
+  margin-top: 40px;
+  color: #6D8299;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.WE_company {
+  color: #4B3869;
+  font-size: 20px;
+  line-height: 1.2;
+
+  margin-bottom: 10px;
+}
+
+.WE_description {
+  font-size: 16px;
+  font-weight: 200;
+}
+
+@media screen and (max-width: 978px) {
+  .about {
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .about_work_experience {
+    grid-row-gap: 20px;
+    line-height: 100%;
+    margin-bottom: 10px;
+  }
+
+  .WE_title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .WE_company {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 0px;
+  }
+
+  .WE_description {
+    font-size: 14px;
+  }
+}
+
+.CV_languages {
+  margin-top: 40px;
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.about_languages {
+  max-width: 1230px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.languages {
+  color: #6D8299;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.languages_list {
+  color: #6D8299;
+  font-size: 16px;
+  line-height: 1.2;
+  margin-bottom: 50px;
+}
+
+.languages_list * {transition: .4s linear;}
+.category-list {
+  background: white;
+  list-style-type: circle;
+  list-style-position: inside;
+  padding: 0 10px;
+  margin: 0;
+}
+.languages_list li {
+  font-family: 'Montserrat', sans-serif;
+  border-bottom: 1px solid #efefef;
+  padding: 10px 0;
+}
+.languages_list b {
+  text-decoration: none;
+  color: #6D8299;
+}
+.languages_list li span {
+  float: right;
+
+  font-size: 16px;
+  color: #6a8aac
+}
+.languages_list li:hover b {color: #4B3869;}
+.languages_list li:hover span {
+  color: #4B3869;
+}
+
+
+@keyframes ava-animate {
+  0% {
+    border-radius: 66% 34% 68% 32% / 63% 41% 59% 37% 
+  }
+
+  40% {
+    border-radius: 57% 43% 60% 40% / 52% 45% 55% 48% 
+  }
+
+  60% {
+    border-radius: 50% 50% 53% 47% / 41% 50% 50% 59% 
+  }
+
+  100% {
+    border-radius: 43% 57% 46% 54% / 35% 53% 47% 65% 
+  }
+}
+
+@keyframes ava-bg {
+  from {
+    backdrop-filter: hue-rotate(0);
+  }
+
+  to {
+    backdrop-filter: hue-rotate(90deg);
+  }
+}
